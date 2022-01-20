@@ -27,16 +27,16 @@ int main(int argc, char *argv[])
     QTranslator *translator = new QTranslator();
     
     //本来はQLocale::system().name()などを利用すべき
-    if(translator->load("translate_ja",translate_filepath))
+    if(translator->load("translate_zh",translate_filepath))
     {
         a.installTranslator(translator);
         MsgBox("TRUE: " + translate_filepath);
     }
-    else if(translator->load("translate_en",translate_filepath))
-    {
-        a.installTranslator(translator);
-        MsgBox("TRUE: " + translate_filepath);
-    }   
+//    else if(translator->load("translate_en",translate_filepath))
+//    {
+//        a.installTranslator(translator);
+//        MsgBox("TRUE: " + translate_filepath);
+//    }
 
     if(translator->isEmpty())
     {
